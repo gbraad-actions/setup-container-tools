@@ -1,0 +1,11 @@
+name: "Setup container tools"
+description: "Setup container tools on the runner"
+author: "Gerard Braad <me@gbraad.nl>"
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        sudo apt-get update
+        sudo apt install -y \
+          podman skopeo buildah
+      shell: bash
